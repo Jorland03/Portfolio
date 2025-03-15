@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(to right, rgb(255,255,255), rgb(254,215,173));
+    text-align: center;
+    padding: 20px;
+}
+
+/* Navigation Bar */
+nav {
+    background: rgb(109, 67, 0);
+    padding: 15px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Activities Section */
+.activities {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.activities h1 {
+    font-size: 2.5rem;
+    color: rgb(109,67,0);
+    margin-bottom: 30px;
+}
+
+/* Grid Layout for Activities */
+.activity {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    margin-bottom: 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 20px auto;
+}
+
+.activity:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.activity img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.activity:hover img {
+    transform: scale(1.05);
+}
+
+/* Text Styling */
+.activity p {
+    font-size: 1rem;
+    color: #444;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+    .activities {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .activity {
+        flex: 1 1 calc(33% - 40px); /* Makes 3 columns on larger screens */
+        max-width: 350px;
+    }
+  }
+  
